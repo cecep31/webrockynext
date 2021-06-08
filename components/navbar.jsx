@@ -1,19 +1,28 @@
 import React from 'react'
+import Downloadicons from '../components/icons/downloadicons';
+import Image from 'next/image'
 
 const navbar = () => {
     return (
-        <nav className="flex justify-between mx-auto px-20 bg-transparent text-gray-400 p-4 font-bold">
-            <div className="mt-3">Logo</div>
-            <div className="grid grid-flow-col grid-rows-1 gap-8 mt-3">
-                <a href="">News</a>
-                <a href="">Wiki</a>
-                <a href="">Forums</a>
-                <a href="">Store</a>
-                <a href="">Donate</a>
+        <nav className="flex justify-between mx-auto px-20 bg-transparent text-gray-400 p-5 font-bold">
+            <a className=" flex text-2xl text-white" href="">
+                <Image src="/logo.png" className="" width={30} height={30} layout="fixed"/>
+                <div className="ml-1">Rocky</div>
+                <div className="font-normal ml-1">Linux<sup className="align-top text-xs">tm</sup></div>
+            </a>
+            <div className="grid grid-flow-col grid-rows-1 gap-8 mt-1">
+                <a className="hover:text-gray-100" href="/news">News</a>
+                <a className="hover:text-gray-100" href="">Wiki</a>
+                <a className="hover:text-gray-100" href="">Forums</a>
+                <a className="hover:text-gray-100" href="">Store</a>
+                <a className="hover:text-gray-100" href="">Donate</a>
             </div>
-            <button className="bg-green-500 text-black p-3">Download</button>
+            <button className="bg-green-500 text-black px-3 py-2 rounded-lg flex"><Downloadicons/><div className="ml-1">Download</div></button>
         </nav>
     )
 }
 
 export default navbar
+
+
+

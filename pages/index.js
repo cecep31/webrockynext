@@ -7,7 +7,7 @@ import React from 'react'
 
 const index = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-gray-900">
       <Navbar />
       
     </div>
