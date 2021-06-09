@@ -7,10 +7,16 @@ import React from 'react'
 
 const index = () => {
   return (
-    <div className="bg-gray-900">
+    <>
+      <Head>
+        <title>Rocky Linux</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Navbar />
-      
-    </div>
+      <main>
+        <div></div>
+      </main>
+    </>
   )
 }
 
