@@ -2,8 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
-
-import React from 'react'
+import Downloadicons from '../components/icons/downloadicons';
 
 const index = () => {
   return (
@@ -13,8 +12,23 @@ const index = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Navbar />
-      <main>
-        <div></div>
+      <main className="max-w-7xl mx-auto">
+        <div className="flex justify-center items-center py-9">
+          <div>
+            <h1 className="text-5xl flex justify-center font-bold text-white">Rocky Linux</h1>
+            <p className="text-gray-400 mt-4 flex justify-center">A community-driven effort to bring you enterprise-grade, production-ready Linux.</p>
+            <div className="flex justify-center mt-7">
+              <button className="font-bold bg-green-500 text-black px-3 py-2 hover:bg-green-400 rounded-lg flex"><Downloadicons/><div className="ml-1">Download</div></button>
+              <button className="font-bold ml-4 bg-transparent border border-green-500 text-green-500 hover:text-black hover:bg-green-400 px-3 py-2 rounded-lg flex"><Downloadicons/><div className="ml-1">Join the Discussion</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 bg-gray-700 gap-4 rounded-lg m-2 mx-auto text-white py-10 px-10">
+          <div className="text-5xl p- ">What is the Rocky Linux project?</div>
+          <div className="p-4">Rocky Linux is a community enterprise operating system designed to be 100% bug-for-bug compatible with America's top enterprise Linux distribution now that its downstream partner has shifted direction. It is under intensive development by the community. Rocky Linux is led by Gregory Kurtzer, founder of the CentOS project. Release Candidate 1 is now available for testing. Contributors are asked to reach out using the communication options offered on this site.</div>
+
+        </div>
       </main>
     </>
   )
