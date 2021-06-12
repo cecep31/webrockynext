@@ -2,7 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
-import Downloadicons from '../components/icons/downloadicons';
+import {Downloadicons , Downloadiconsgreen} from '../components/icons/fether';
+import Buttondownload from '../components/button'
+import React from 'react'
 
 const index = () => {
   return (
@@ -19,7 +21,7 @@ const index = () => {
             <p className="text-gray-400 mt-6 flex justify-center text-lg">A community-driven effort to bring you enterprise-grade, production-ready Linux.</p>
             <div className="flex justify-center mt-8">
               <button className="font-bold bg-green-500 text-black px-3 py-2 hover:bg-green-400 rounded-lg flex"><Downloadicons/><div className="ml-1">Download</div></button>
-              <button className="font-bold ml-4 bg-transparent border border-green-500 text-green-500 hover:text-black hover:bg-green-400 px-3 py-2 rounded-lg flex"><Downloadicons/><div className="ml-1">Join the Discussion</div></button>
+              <button className="font-bold ml-4 bg-transparent border border-green-500 text-green-500 hover:text-black hover:bg-green-400 px-3 py-2 rounded-lg flex"><Downloadiconsgreen/><div className="ml-1">Join the Discussion</div></button>
             </div>
           </div>
         </div>
@@ -29,6 +31,9 @@ const index = () => {
           <div className="p-4 text-lg text-gray-300">Rocky Linux is a community enterprise operating system designed to be 100% bug-for-bug compatible with America's top enterprise Linux distribution now that its downstream partner has shifted direction. It is under intensive development by the community. Rocky Linux is led by Gregory Kurtzer, founder of the CentOS project. Release Candidate 1 is now available for testing. Contributors are asked to reach out using the communication options offered on this site.</div>
 
         </div>
+        <div>
+          <Buttondownload href="/news"/>
+       </div>
       </main>
     </>
   )

@@ -1,5 +1,5 @@
 import React from 'react'
-import Downloadicons from '../components/icons/downloadicons';
+import {Downloadicons} from './icons/fether';
 import Image from 'next/image'
 
 const navbar = () => {
